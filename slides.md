@@ -487,7 +487,7 @@ criticism, and can propose radical ideas.
 <small>--
 [Kelsey Hightower](https://twitter.com/kelseyhightower/status/1393194153681440780)</small>
 
-## Thank you & happy connecting!
+## Thank you!
 
 Please share your feedback!
 
