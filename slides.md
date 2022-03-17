@@ -3,10 +3,10 @@ title: Using communication frameworks to become a better engineering leader
 theme: white
 slideNumber: true
 header-includes: |
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-      font-weight: 300;
+      font-weight: 500;
       text-transform: none;
       font-family: var(--heading-font);
       color: #a90073;
@@ -33,8 +33,8 @@ header-includes: |
      color: #a90073;
    }
    :root {
-        --main-font: 'Raleway', sans-serif;
-       --heading-font: 'Raleway', sans-serif;
+        --main-font: 'Lato', sans-serif;
+       --heading-font: 'Lato', sans-serif;
    }
    .reveal-viewport {
      background-color: #fff;
@@ -108,18 +108,16 @@ header-includes: |
 
 :::::::::::::: {.columns}
 
-::: {.column}
+::: {.column width=33%}
 
-![Markus Tacker](./markus.jpg){width=35%}
+![Markus Tacker](./markus.jpg){width=50%}
 
 Markus Tacker
 
 <small>**Software crafter. Code donor. Mentor. Speaker. Conference & Community
 builder. Camper.**</small>
 
-<small>[m@coderbyheart.com](mailto:m@coderbyheart.com)  
-Twitter: [\@coderbyheart](https://twitter.com/coderbyheart)  
-[coderbyheart.com](https://coderbyheart.com)</small>
+<small>[\@coderbyheart](https://twitter.com/coderbyheart)</small>
 
 :::
 
@@ -140,9 +138,9 @@ Twitter: [\@coderbyheart](https://twitter.com/coderbyheart)
 :::notes
 
 Having had the opportunity to earn my living as a software developer since 1997,
-I have lost count of the number of meetups and conferences I’ve attended as a
-participant or speaker, the number of YouTube videos I’ve watched, blog posts
-I’ve read and written – all in pursuit of one goal: improving my skills as a
+I have lost count of the number of meetups and conferences I've attended as a
+participant or speaker, the number of YouTube videos I've watched, blog posts
+I've read and written – all in pursuit of one goal: improving my skills as a
 developer and to become a god of the world wide web, a ninja, a rock star, a
 full stack developer.
 
@@ -151,15 +149,15 @@ brought into existence by heroic acts of willpower that are only possible after
 many, many years – by day as a paid software professional, and by night as an
 open source contributor.
 
+:::
+
+## Stop becoming a full stack developer – your efforts are futile
+
+:::notes
+
 It was in 2012 when I started to interact with the community outside of my
 workplace and then eventually realized that the effort to become a full stack
 developer is futile.
-
-:::
-
-## Stop becoming a full stack developer – your efforts are futile.
-
-:::notes
 
 Five years later, after having met many amazing, humble people in the
 [software craft community](https://www.softwarecrafters.org/) that care about
@@ -169,15 +167,15 @@ aim to become a master on all levels of the stack stems from a preposterous
 self-glorification. Building world class software is  a
 [complex and sometimes chaotic](https://en.wikipedia.org/wiki/Cynefin_framework)
 process that requires knowledge on so many different aspects (backend, frontend,
-UX, privacy, accessibility, CI/CD, operations, etc.) that it’s impossible for an
+UX, privacy, accessibility, CI/CD, operations, etc.) that it's impossible for an
 individual to acquire the amount of knowledge needed to be _the_ expert on all
 of them.
 
 :::
 
-##
+## Your skills?
 
-![Your skills vary across the professions](./skills.jpg)
+![Your skills vary across the professions](./skills.png)
 
 :::notes
 
@@ -194,22 +192,20 @@ one), or an average?
 
 :::
 
-##
+## "Fullstack"
 
-![Fullstack](./fullstack.jpg)
+![Fullstack](./fullstack.png)
 
 :::notes
 
-You can see that the label of ‘full stack developer’
+You can see that the label of ‘full stack developer'
 [is problematic already](https://twitter.com/AmarachiAmaechi/status/1185891780128133120).
-
-<https://twitter.com/coderbyheart/status/1185891780128133120?embed>
 
 :::
 
-##
+## Your skills are domain specific
 
-![Skill graph](./skills2.jpg)
+![Skill graph](./skills2.png)
 
 :::notes
 
@@ -226,7 +222,7 @@ systems, your fields of expertise will have an entirely different focus.
 
 ## Technical skills have a limited lifetime
 
-![Skills over time](./time-skills.jpg)
+![Skills over time](./time-skills.png)
 
 :::notes
 
@@ -239,10 +235,9 @@ stack developer skill will fluctuate over the years of your career.
 
 :::
 
-##
+## You will never truly be
 
-> This all means you will never truly be a ‘principal full stack developer’.
-> _Sorry._
+a **principal full stack developer**.
 
 :::notes
 
@@ -264,7 +259,7 @@ It's impossible to achieve greatness solely on your own.
 
 :::notes
 
-I didn’t see it in 2017, and it seems like I was still framing my function in
+I didn't see it in 2017, and it seems like I was still framing my function in
 isolation. To you it might be obvious: building software is a team effort and
 typical project sizes make it impossible to be the sole decision-maker for all
 technical decisions in a project.
@@ -277,18 +272,26 @@ own.
 
 ## Writing software is a team effort
 
-_Writing software is a team effort – you will always lack important skills to
-realize the best work you have ever done._
+## You will always lack important skills
 
-_You will always depend on others to work with you, and the more experienced you
-are, the more others depend on you enabling them to achieve their best._
+to realize the best work you have ever done.
+
+## You will always depend on others
+
+to work with you
+
+## The more experienced you are
+
+the more others depend on you enabling them to achieve their best.
 
 ## I'd love to have more software problems
+
+but I really only have people problems.
 
 :::notes
 
 If I would categorize the problems I encountered in my career into people
-problems and software problems, it’s only the people problems that are the real
+problems and software problems, it's only the people problems that are the real
 challenge.
 
 I'd love to have more software problems, because dealing with software problems
@@ -296,25 +299,24 @@ is sometimes hard, but there is always a solution: fix it, hack it, or scrap it
 and take another approach.
 
 But people problems are the ones that give me sleepless nights and stress me
-out. These problems are different: we can’t make the person on the other side do
+out. These problems are different: we can't make the person on the other side do
 what we want – we can only try to get on the same level with them to resolve
-issues, but we can’t, ultimately, change them.
+issues, but we can't, ultimately, change them.
 
 :::
 
-## The peopleware
+## We want people to be like our code
 
-As engineers, we expect people to have the same quality as a program: to fix a
-problem, I just have to explain, really slowly, what’s wrong with them for the
-problem to go away.
+_Just_ explain, really slowly, what's wrong with _them_  
+for the problem to go away.
 
 :::notes
 
 Somehow, as engineers, we expect people to have the same quality: to fix a
-problem, I just have to explain, really slowly, what’s wrong with them for the
+problem, I just have to explain, really slowly, what's wrong with them for the
 problem to go away.
 
-However, in the past I’ve invested very little time in educating myself on
+However, in the past I've invested very little time in educating myself on
 collaboration and communication. And I am certainly not alone.
 
 We developers happily pay (with our money and our time) for getting up to speed
@@ -322,11 +324,13 @@ on tech topics. We don't do this for communication and collaboration skills. And
 this is not because our employers don't offer this, as they rarely offer
 structured tech training, either.
 
-I want us to change this. That’s why I am writing this article.
+I want us to change this. That's why I am writing this article.
 
 :::
 
 ## Where to start?
+
+at being better than that.
 
 :::notes
 
@@ -336,18 +340,20 @@ that revolve around technical skills.
 Over time, I have developed a great sense for finding interesting content
 through Twitter, Slack, and  YouTube because I know what to look for and my
 trained pattern recognition skill can easily identify relevant tech content. But
-when it comes to collaboration, communication, and leadership, I don’t have that
-sixth sense, yet. Let’s look at the actions I’ve taken in the past couple of
+when it comes to collaboration, communication, and leadership, I don't have that
+sixth sense, yet. Let's look at the actions I've taken in the past couple of
 years to start developing it.
 
 :::
 
 ## Communication frameworks
 
+Algorithms for human interaction.
+
 :::notes
 
 I mentioned earlier that people problems are different to software problems,
-which means we cannot apply the same principles. I can’t fix another person,
+which means we cannot apply the same principles. I can't fix another person,
 however,
 [I am responsible for how their actions affect me](http://threeminutetherapy.com/rebt).
 I decide to feel angry, hurt, annoyed, ashamed. How I feel about something is
@@ -362,6 +368,14 @@ communicating with others.
 :::
 
 ## Nonviolent communication
+
+1. Observations
+1. Feelings _(that's the hard one!)_
+1. Needs
+1. Requests
+
+Separate emotions from the message,  
+and create mutual understanding.
 
 :::notes
 
@@ -385,6 +399,10 @@ Bob Marshall has a great summary about
 
 ## Four-sides model
 
+![Four-sides model](./four-sides.svg)
+
+Every message encodes multiple aspects.
+
 :::notes
 
 The [four-sides model](https://en.wikipedia.org/wiki/Four-sides_model) is a
@@ -393,12 +411,20 @@ as a composite of various aspects and it helps to identify and separate the
 different aspects that were amalgamated by the sender of a message. I learned
 about this model back when I was studying communication as part of my first
 professional education many years ago. It's helpful to identify the aspects
-within the model  in written communication in order to better understand the
-true meaning of a message.
+within the model in written communication in order to better understand the true
+meaning of a message.
 
 :::
 
 ## The five love languages
+
+1. words of affirmation (compliments)
+1. quality time
+1. receiving gifts
+1. acts of service
+1. physical touch
+
+What motivates them _and_ you?
 
 :::notes
 
@@ -415,6 +441,10 @@ way the recipient understands.
 
 ## The core protocols
 
+For people who _love_ structure.
+
+**My tip:** _read it!_
+
 :::notes
 
 A few years ago I took the time to read
@@ -423,7 +453,7 @@ very regimented approaches to human interaction. This works for some, but in my
 experience, requires a lot of discipline. Many that experience using it, develop
 an uncanny valley feeling of being overly controlled. In my experience as an
 organizational coach, these systems do not work well with heterogeneous teams
-where you gradually change something; it's hard to explain to an ‘outsider’ why
+where you gradually change something; it's hard to explain to an ‘outsider' why
 this makes sense and it can actually feel inhuman. It is, however, a fascinating
 source material to look into because it very explicitly highlights communication
 issues and how to deal with them.
@@ -431,6 +461,9 @@ issues and how to deal with them.
 :::
 
 ## Structured RFC process
+
+How to make decisions,  
+when everybody has a say.
 
 :::notes
 
@@ -443,13 +476,15 @@ dynamics become painfully visible.
 
 :::
 
-## Ladder of leadership
+## Ladder of Leadership
+
+Be _intentional_ about rules, decisions and hierarchies.
 
 :::notes
 
-L. David Marquet’s
-‘[Ladder of Leadership](https://www.youtube.com/watch?v=-sri5wyth4I)’ is a
-really powerful concept that describes ‘angles of freedom’ in a collaborative
+L. David Marquet's
+‘[Ladder of Leadership](https://www.youtube.com/watch?v=-sri5wyth4I)' is a
+really powerful concept that describes ‘angles of freedom' in a collaborative
 relationship. What's great about it is that it provides a model for
 communication that involves everybody in making implicit rules around
 decision-making explicit, and provides a road towards enabling team members to
@@ -457,9 +492,24 @@ make autonomous decisions.
 
 :::
 
-##
+## The _real_ power skill
+
+effective communication
 
 :::notes
+
+The way you communicate and handle conflict influences your personal and your
+team's wellbeing tremendously.
+
+This is key to creating workplaces where people feel valued, heard, and
+understood, and where they feel safe to voice concerns, criticism, and can
+propose radical ideas.
+
+I hope I inspired you to invest more time in your real power skills: the way you
+communicate and handle conflict influences your personal and your team's
+wellbeing tremendously. This is key to creating workplaces where people feel
+valued, heard, and understood, and where they feel safe to voice concerns,
+criticism, and can propose radical ideas.
 
 I am just beginning to explore this space and I already have enough material for
 many years to come. I also invite you to run a session at an open-space you
@@ -473,16 +523,13 @@ outcome of this session was a list of book recommendations:
 and
 [The Coaching Habit](https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749).
 
-I hope I inspired you to invest more time in your real power skills: the way you
-communicate and handle conflict influences your personal and your team’s
-wellbeing tremendously. This is key to creating workplaces where people feel
-valued, heard, and understood, and where they feel safe to voice concerns,
-criticism, and can propose radical ideas.
-
 :::
 
-> Overly focusing on tech is how you end up with the skills of a senior engineer
-> and the experience of a junior human being.
+## As Kelsey said
+
+Overly focusing on tech  
+is how you end up with the skills of a senior engineer  
+and the experience of a junior human being.
 
 <small>--
 [Kelsey Hightower](https://twitter.com/kelseyhightower/status/1393194153681440780)</small>
@@ -492,7 +539,7 @@ criticism, and can propose radical ideas.
 Please share your feedback!
 
 <small>[m@coderbyheart.com](mailto:m@coderbyheart.com)  
-Twitter: [\@coderbyheart](https://twitter.com/coderbyheart)</small>
+[\@coderbyheart](https://twitter.com/coderbyheart)</small>
 
-<small>Blog post version:  
+<small>Blog post with all the links:  
 [`bit.ly/codecomm`](https://bit.ly/codecomm)</small>
