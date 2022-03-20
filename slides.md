@@ -2,11 +2,12 @@
 title: Using communication frameworks to become a better engineering leader
 theme: white
 slideNumber: true
+transition: none
 header-includes: |
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-      font-weight: 500;
+      font-weight: 700;
       text-transform: none;
       font-family: var(--heading-font);
       color: #a90073;
