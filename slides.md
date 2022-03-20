@@ -275,6 +275,14 @@ own.
 
 ## Writing software is a team effort
 
+![Work](./work.webp)
+
+:::notes
+
+Source: https://sweartrek.tumblr.com/post/166083037925/work
+
+:::
+
 ## You will always lack important skills
 
 to realize the best work you have ever done.
@@ -532,11 +540,7 @@ and
 
 :::
 
-## As Kelsey said
-
-Overly focusing on tech  
-is how you end up with the skills of a senior engineer  
-and the experience of a junior human being.
+## Overly focusing on tech is how you end up with the skills of a senior engineer and the experience of a junior human being.
 
 <small>--
 [Kelsey Hightower](https://twitter.com/kelseyhightower/status/1393194153681440780)</small>
