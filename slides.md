@@ -152,7 +152,9 @@ open source contributor.
 
 :::
 
-## Stop becoming a full stack developer – your efforts are futile
+## Stop becoming a full stack developer
+
+your efforts are futile
 
 :::notes
 
@@ -328,6 +330,10 @@ structured tech training, either.
 I want us to change this. That's why I am writing this article.
 
 :::
+
+## Software has unlimited capacity for mistakes
+
+People do not.
 
 ## Where to start?
 
