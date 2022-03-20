@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/coderbyheart/better-eng-leader-using-comm-frameworks-lightning-talk#readme",
   "devDependencies": {
-    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.40",
+    "@nordicsemiconductor/asset-tracker-cloud-code-style": "11.0.42",
     "live-server": "1.2.1",
     "prettier": "2.6.0"
   },
