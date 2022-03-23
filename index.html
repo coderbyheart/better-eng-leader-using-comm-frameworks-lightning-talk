@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Using communication frameworks to become a better engineering leader</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/white.css" id="theme">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+   .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+      font-weight: 700;
+      text-transform: none;
+      font-family: var(--heading-font);
+      color: #a90073;
+   } 
+   .reveal {
+        font-size: var(--main-font-size);
+        font-family: var(--main-font); 
+        font-weight: 400;
+        font-size: 32px;
+        margin-top: 42px;
+        height: calc(100% - 42px);
+   }
+   .reveal strong {
+        font-weight: 500;
+   }
+   .reveal a {
+      color: #a90073;
+   }
+   .reveal ul {
+     list-style-type: square;
+     list-style-color: #a90073;
+   }
+   .reveal li::marker {
+     color: #a90073;
+   }
+   :root {
+        --main-font: 'Lato', sans-serif;
+       --heading-font: 'Lato', sans-serif;
+   }
+   .reveal-viewport {
+     background-color: #fff;
+   }
+   .reveal-viewport::before {
+      content: "© Markus Tacker | CC-BY-NC-SA-4.0";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%; 
+      height: 42px;
+      background-color: #191919;
+      color: white;
+      font-family: var(--main-font);
+      font-size: 14px;
+      line-height: 42px;
+      padding-left: 10vw;
+   }
+   #markus-tacker img {
+      border-radius: 100%;
+    }
+    #markus-tacker ul {
+      font-size: 80%;
+      margin-top: 6rem;
+    }
+    #markus-tacker div.column:first-child {
+      text-align: center;
+    }
+    #title-slide h1 {
+      font-weight: 500;
+      font-size: 60px;
+    }
+    #title-slide h1:after {
+      content: "BoosterConf 2022 | Bergen, Norway";
+      display: block;
+      color: #222;
+      background-color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-weight: 300;
+      font-size: 32px;
+    }
+    #title-slide:after {
+      content: "February 2022";
+      font-size: 22px;
+      color: white;
+      font-style: italic;
+    }
+    figcaption {
+      display: none;
+    }
+    div.column {
+      text-align: left;
+      width: calc(50% - 1rem); 
+      margin-right: 1rem;
+    }
+    div.column + div.column {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+    #thank-you-happy-connecting.slide p {
+      text-align: center;
+    }
+    .reveal pre {
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Using communication frameworks to become a better
+engineering leader</h1>
+</section>
+
+<section id="markus-tacker" class="title-slide slide level2">
+<h2>Markus Tacker</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<figure>
+<img data-src="./markus.jpg" style="width:50.0%" alt="Markus Tacker" />
+<figcaption aria-hidden="true">Markus Tacker</figcaption>
+</figure>
+</div><div class="column" style="width:48%;">
+<p>Senior R&amp;D Engineer, Nordic Semiconductor, Trondheim</p>
+<p><small><strong>Software crafter. Code donor. Mentor. Speaker.
+Conference &amp; Community builder. Camper.</strong></small></p>
+<p><a href="https://twitter.com/coderbyheart">@coderbyheart</a></p>
+</div>
+</div>
+<aside class="notes">
+<p>Having had the opportunity to earn my living as a software developer
+since 1997, I have lost count of the number of meetups and conferences
+I’ve attended as a participant or speaker, the number of YouTube videos
+I’ve watched, blog posts I’ve read and written – all in pursuit of one
+goal: improving my skills as a developer and to become a god of the
+world wide web, a ninja, a rock star, a full stack developer.</p>
+<p>Many developers see themselves as artists and their works as divine
+creations brought into existence by heroic acts of willpower that are
+only possible after many, many years – by day as a paid software
+professional, and by night as an open source contributor.</p>
+</aside>
+</section>
+
+<section id="stop-becoming-a-full-stack-developer"
+class="title-slide slide level2">
+<h2>Stop becoming a full stack developer</h2>
+<p>your efforts are futile</p>
+<aside class="notes">
+<p>It was in 2012 when I started to interact with the community outside
+of my workplace and then eventually realized that the effort to become a
+full stack developer is futile.</p>
+<p>Five years later, after having met many amazing, humble people in the
+<a href="https://www.softwarecrafters.org/">software craft community</a>
+that care about software quality the same way I do, <a
+href="https://coderbyheart.com/the-full-stack-developer-trap">I
+concluded</a> that the aim to become a master on all levels of the stack
+stems from a preposterous self-glorification. Building world class
+software is  a <a
+href="https://en.wikipedia.org/wiki/Cynefin_framework">complex and
+sometimes chaotic</a> process that requires knowledge on so many
+different aspects (backend, frontend, UX, privacy, accessibility, CI/CD,
+operations, etc.) that it’s impossible for an individual to acquire the
+amount of knowledge needed to be <em>the</em> expert on all of them.</p>
+</aside>
+</section>
+
+<section id="your-skills" class="title-slide slide level2">
+<h2>Your skills?</h2>
+<figure>
+<img data-src="./skills.png"
+alt="Your skills vary across the professions" />
+<figcaption aria-hidden="true">Your skills vary across the
+professions</figcaption>
+</figure>
+<aside class="notes">
+<p>Being a full stack developer supposedly means that you possess the
+skills to develop an application end to end. This is of course a very
+simplified view, since being a full stack developer means you need to be
+proficient in a multitude of areas: your skill is not a single value but
+varies across the professions as shown in this graph.</p>
+<p>Ask yourself this: what is your overall level? Your highest skill in
+one of these areas (so a t-shaped skill set lets you call yourself a
+full stack developer), your lowest skill (you need to master all in
+order to call yourself one), or an average?</p>
+</aside>
+</section>
+
+<section id="fullstack" class="title-slide slide level2">
+<h2>“Fullstack”</h2>
+<figure>
+<img data-src="./fullstack.png" alt="Fullstack" />
+<figcaption aria-hidden="true">Fullstack</figcaption>
+</figure>
+<aside class="notes">
+<p>You can see that the label of ‘full stack developer’ <a
+href="https://twitter.com/AmarachiAmaechi/status/1185891780128133120">is
+problematic already</a>.</p>
+</aside>
+</section>
+
+<section id="your-skills-are-domain-specific"
+class="title-slide slide level2">
+<h2>Your skills are domain specific</h2>
+<figure>
+<img data-src="./skills2.png" style="width:75.0%" alt="Skill graph" />
+<figcaption aria-hidden="true">Skill graph</figcaption>
+</figure>
+<aside class="notes">
+<p>If we consider more deeply what is needed to develop software, we
+also need to take into account the various requirements of the
+respective domain the application is intended for.</p>
+<p>Your skill is always relative to the sector you are working in. If
+you mostly work on ecommerce projects, you will most likely have deep
+knowledge in performance, payment systems, and user journeys. If you
+work on internal banking systems, your fields of expertise will have an
+entirely different focus.</p>
+</aside>
+</section>
+
+<section id="technical-skills-have-a-limited-lifetime"
+class="title-slide slide level2">
+<h2>Technical skills have a limited lifetime</h2>
+<figure>
+<img data-src="./time-skills.png" alt="Skills over time" />
+<figcaption aria-hidden="true">Skills over time</figcaption>
+</figure>
+<aside class="notes">
+<p>All of the above also needs to be viewed through an important fourth
+dimension: time!</p>
+<p>Your skill is a function of the time you spend improving it, and
+since you cannot simultaneously improve all skills at the same time,
+your absolute full stack developer skill will fluctuate over the years
+of your career.</p>
+</aside>
+</section>
+
+<section id="you-will-never-truly-be" class="title-slide slide level2">
+<h2>You will never truly be</h2>
+<p>a <strong>principal full stack developer</strong>.</p>
+<aside class="notes">
+<p>Software is an incredibly fast-changing field, and the skills
+associated with a full stack developer usually become outdated within a
+few years – a fraction of your total working life!</p>
+<p>This realization brought me to the conclusion of focusing my learning
+journey on the area where my talent, my interests, and my ability to
+sell these skills <a
+href="https://en.wikipedia.org/wiki/Ikigai">overlap</a>: being a great
+architect and developer for cloud native solutions, while trying to keep
+following the frontend trends.</p>
+</aside>
+</section>
+
+<section id="dont-frame-your-function-in-isolation"
+class="title-slide slide level2">
+<h2>Don’t frame your function in isolation</h2>
+<p>It’s impossible to achieve greatness solely on your own.</p>
+<aside class="notes">
+<p>I didn’t see it in 2017, and it seems like I was still framing my
+function in isolation. To you it might be obvious: building software is
+a team effort and typical project sizes make it impossible to be the
+sole decision-maker for all technical decisions in a project.</p>
+<p>It took me a while to realize this. I am most likely not the only
+developer going through this process. It’s impossible to achieve
+greatness solely on your own.</p>
+</aside>
+</section>
+
+<section id="you-will-always-lack-important-skills"
+class="title-slide slide level2">
+<h2>You will always lack important skills</h2>
+<p>to realize the best work you have ever done.</p>
+</section>
+
+<section id="you-will-always-depend-on-others"
+class="title-slide slide level2">
+<h2>You will always depend on others</h2>
+<p>to work with you</p>
+</section>
+
+<section id="writing-software-is-a-team-effort"
+class="title-slide slide level2">
+<h2>Writing software is a team effort</h2>
+<figure>
+<img data-src="./work.webp" alt="Work" />
+<figcaption aria-hidden="true">Work</figcaption>
+</figure>
+<aside class="notes">
+<p>Source: https://sweartrek.tumblr.com/post/166083037925/work</p>
+</aside>
+</section>
+
+<section id="we-want-people-to-be-like-our-code"
+class="title-slide slide level2">
+<h2>We want people to be like our code</h2>
+<p><em>Just</em> explain, really slowly, what’s wrong with
+<em>them</em><br />
+for the problem to go away.</p>
+<aside class="notes">
+<p>Somehow, as engineers, we expect people to have the same quality: to
+fix a problem, I just have to explain, really slowly, what’s wrong with
+them for the problem to go away.</p>
+<p>However, in the past I’ve invested very little time in educating
+myself on collaboration and communication. And I am certainly not
+alone.</p>
+<p>We developers happily pay (with our money and our time) for getting
+up to speed on tech topics. We don’t do this for communication and
+collaboration skills. And this is not because our employers don’t offer
+this, as they rarely offer structured tech training, either.</p>
+<p>I want us to change this. That’s why I am writing this article.</p>
+</aside>
+</section>
+
+<section id="id-love-to-have-more-software-problems"
+class="title-slide slide level2">
+<h2>I’d love to have more software problems</h2>
+<p>but I really only have people problems.</p>
+<aside class="notes">
+<p>If I would categorize the problems I encountered in my career into
+people problems and software problems, it’s only the people problems
+that are the real challenge.</p>
+<p>I’d love to have more software problems, because dealing with
+software problems is sometimes hard, but there is always a solution: fix
+it, hack it, or scrap it and take another approach.</p>
+<p>But people problems are the ones that give me sleepless nights and
+stress me out. These problems are different: we can’t make the person on
+the other side do what we want – we can only try to get on the same
+level with them to resolve issues, but we can’t, ultimately, change
+them.</p>
+</aside>
+</section>
+
+<section id="software-has-unlimited-capacity-for-mistakes"
+class="title-slide slide level2">
+<h2>Software has unlimited capacity for mistakes</h2>
+<p>People do not.</p>
+</section>
+
+<section id="where-to-start" class="title-slide slide level2">
+<h2>Where to start?</h2>
+<p>at being better than that.</p>
+<aside class="notes">
+<p>Our industry is flooded with communities, blog posts, meetups, and
+conferences that revolve around technical skills.</p>
+<p>Over time, I have developed a great sense for finding interesting
+content through Twitter, Slack, and  YouTube because I know what to look
+for and my trained pattern recognition skill can easily identify
+relevant tech content. But when it comes to collaboration,
+communication, and leadership, I don’t have that sixth sense, yet. Let’s
+look at the actions I’ve taken in the past couple of years to start
+developing it.</p>
+</aside>
+</section>
+
+<section id="communication-frameworks" class="title-slide slide level2">
+<h2>Communication frameworks</h2>
+<p>Algorithms for human interaction.</p>
+<aside class="notes">
+<p>I mentioned earlier that people problems are different to software
+problems, which means we cannot apply the same principles. I can’t fix
+another person, however, <a href="http://threeminutetherapy.com/rebt">I
+am responsible for how their actions affect me</a>. I decide to feel
+angry, hurt, annoyed, ashamed. How I feel about something is solely my
+responsibility.</p>
+<p>There are communication frameworks we  can adopt or extend on like we
+do for software. Because, as with software frameworks, communication
+frameworks should prevent us from making the same mistakes over and over
+again and provide best practices that will let us achieve our goals
+faster: less conflict when communicating with others.</p>
+</aside>
+</section>
+
+<section id="nonviolent-communication" class="title-slide slide level2">
+<h2>Nonviolent communication</h2>
+<ol type="1">
+<li>Observations</li>
+<li>Feelings <em>(that’s the hard one!)</em></li>
+<li>Needs</li>
+<li>Requests</li>
+</ol>
+<p>Separate emotions from the message,<br />
+and create mutual understanding.</p>
+<aside class="notes">
+<p><a
+href="https://en.wikipedia.org/wiki/Nonviolent_Communication">Nonviolent
+communication</a> helps to identify my emotions and separate them from
+the message, it also gives you the tools to help the other party help
+you, by providing clear information about how you feel (without blaming
+them), and providing them ways to help you. It gives you a process to
+dissect communication and try to find the true message, which might be
+wrapped in emotions and hard to understand initially. But this is a
+one-sided method, where I do the analysis and do not work with the other
+person on the way they communicate.</p>
+<p>Lara Hogan has a talk on how to use this method for feedback on
+LeadDev.com: <a
+href="https://leaddev.com/team/navigating-engineering-team-friction">Navigating
+engineering team friction</a>, where she talks about the <a
+href="https://larahogan.me/blog/feedback-equation/">feedback
+equation</a>. Additionally, Bob Marshall has a great summary about <a
+href="https://flowchainsensei.wordpress.com/2015/09/04/nvc-in-the-workplace/">using
+NVC in the workplace</a>.</p>
+</aside>
+</section>
+
+<section id="four-sides-model" class="title-slide slide level2">
+<h2>Four-sides model</h2>
+<figure>
+<img data-src="./four-sides.svg" alt="Four-sides model" />
+<figcaption aria-hidden="true">Four-sides model</figcaption>
+</figure>
+<p>Every message encodes multiple aspects.</p>
+<aside class="notes">
+<p>The <a
+href="https://en.wikipedia.org/wiki/Four-sides_model">four-sides
+model</a> is a valuable complement to non-violent communication, since
+it also models a message as a composite of various aspects and it helps
+to identify and separate the different aspects that were amalgamated by
+the sender of a message. I learned about this model back when I was
+studying communication as part of my first professional education many
+years ago. It’s helpful to identify the aspects within the model in
+written communication in order to better understand the true meaning of
+a message.</p>
+</aside>
+</section>
+
+<section id="the-five-love-languages" class="title-slide slide level2">
+<h2>The five love languages</h2>
+<ol type="1">
+<li>words of affirmation (compliments)</li>
+<li>quality time</li>
+<li>receiving gifts</li>
+<li>acts of service</li>
+<li>physical touch</li>
+</ol>
+<p>What motivates them <em>and</em> you?</p>
+<aside class="notes">
+<p>Since most people work for some kind of affirmation, the <a
+href="https://en.wikipedia.org/wiki/The_Five_Love_Languages">five love
+languages</a> give a good model about the different ways humans are
+receptive of gratification and it is important, as a collaborator, to
+understand what drives them and how you can give them the feeling that
+you value their work. The important learning here is that means of
+affirmation can be completely different to your own, so you need to make
+a conscious effort to translate affirmation and gratitude in a way the
+recipient understands.</p>
+</aside>
+</section>
+
+<section id="the-core-protocols" class="title-slide slide level2">
+<h2>The core protocols</h2>
+<p>For people who <em>love</em> structure.</p>
+<p><strong>My tip:</strong> <em>read it!</em></p>
+<aside class="notes">
+<p>A few years ago I took the time to read <a
+href="https://liveingreatness.com/core-protocols/">The Core
+Protocols</a>, but they are very regimented approaches to human
+interaction. This works for some, but in my experience, requires a lot
+of discipline. Many that experience using it, develop an uncanny valley
+feeling of being overly controlled. In my experience as an
+organizational coach, these systems do not work well with heterogeneous
+teams where you gradually change something; it’s hard to explain to an
+‘outsider’ why this makes sense and it can actually feel inhuman. It is,
+however, a fascinating source material to look into because it very
+explicitly highlights communication issues and how to deal with
+them.</p>
+</aside>
+</section>
+
+<section id="structured-rfc-process" class="title-slide slide level2">
+<h2>Structured RFC process</h2>
+<p>How to make decisions,<br />
+when everybody has a say.</p>
+<aside class="notes">
+<p>Phil Calçado published an article proposing a <a
+href="https://philcalcado.com/2018/11/19/a_structured_rfc_process.html">structured
+RFC process</a> about communication which puts a spotlight on the aspect
+of discussion and decision-making. His analysis and proposal are very
+valuable because decision-making is one major source for conflict and
+often a time where power dynamics become painfully visible.</p>
+</aside>
+</section>
+
+<section id="ladder-of-leadership" class="title-slide slide level2">
+<h2>Ladder of Leadership</h2>
+<p>Be <em>intentional</em> about rules, decisions and hierarchies.</p>
+<aside class="notes">
+<p>L. David Marquet’s ‘<a
+href="https://www.youtube.com/watch?v=-sri5wyth4I">Ladder of
+Leadership</a>’ is a really powerful concept that describes ‘angles of
+freedom’ in a collaborative relationship. What’s great about it is that
+it provides a model for communication that involves everybody in making
+implicit rules around decision-making explicit, and provides a road
+towards enabling team members to make autonomous decisions.</p>
+</aside>
+</section>
+
+<section id="the-real-power-skill" class="title-slide slide level2">
+<h2>The <em>real</em> power skill</h2>
+<p>effective communication</p>
+<aside class="notes">
+<p>The way you communicate and handle conflict influences your personal
+and your team’s wellbeing tremendously.</p>
+<p>This is key to creating workplaces where people feel valued, heard,
+and understood, and where they feel safe to voice concerns, criticism,
+and can propose radical ideas.</p>
+<p>I hope I inspired you to invest more time in your real power skills:
+the way you communicate and handle conflict influences your personal and
+your team’s wellbeing tremendously. This is key to creating workplaces
+where people feel valued, heard, and understood, and where they feel
+safe to voice concerns, criticism, and can propose radical ideas.</p>
+<p>I am just beginning to explore this space and I already have enough
+material for many years to come. I also invite you to run a session at
+an open-space you attend, <a
+href="https://twitter.com/coderbyheart/status/1152190229601820672">like
+I did at the JSCraftCamp 2019</a>, this is a great way to spread
+awareness about this topic and also collect input from others on the
+resources they use to improve their collaboration skills. One outcome of
+this session was a list of book recommendations: <a
+href="https://www.amazon.com/Crucial-Conversations-Tools-Talking-Stakes/dp/0071401946">Crucial
+Conversations</a>, <a
+href="https://www.amazon.com/Adversaries-into-Allies-Ultimate-Influence/dp/1591848164">Adversaries
+into Allies</a>, and <a
+href="https://www.amazon.com/Coaching-Habit-Less-Change-Forever/dp/0978440749">The
+Coaching Habit</a>.</p>
+</aside>
+</section>
+
+<section
+id="overly-focusing-on-tech-is-how-you-end-up-with-the-skills-of-a-senior-engineer-and-the-experience-of-a-junior-human-being."
+class="title-slide slide level2">
+<h2>Overly focusing on tech is how you end up with the skills of a
+senior engineer and the experience of a junior human being.</h2>
+<p><small>– <a
+href="https://twitter.com/kelseyhightower/status/1393194153681440780">Kelsey
+Hightower</a></small></p>
+</section>
+
+<section id="thank-you" class="title-slide slide level2">
+<h2>Thank you!</h2>
+<p>Please share your feedback!</p>
+<p><a href="mailto:m@coderbyheart.com">m@coderbyheart.com</a><br />
+<a href="https://twitter.com/coderbyheart">@coderbyheart</a></p>
+<p>Blog post with all the links:<br />
+<a href="https://bit.ly/codecomm"><code>bit.ly/codecomm</code></a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
