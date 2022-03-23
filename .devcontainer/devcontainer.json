@@ -12,7 +12,7 @@
     "graphql.vscode-graphql",
     "dbaeumer.vscode-eslint"
   ],
-  "forwardPorts": [8000],
+  "forwardPorts": [],
   "postCreateCommand": "npm ci",
   "remoteUser": "node"
 }

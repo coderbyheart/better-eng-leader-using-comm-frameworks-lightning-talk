@@ -54,14 +54,14 @@ header-includes: |
       line-height: 42px;
       padding-left: 10vw;
    }
-   #about-me img {
+   #markus-tacker img {
       border-radius: 100%;
     }
-    #about-me ul {
+    #markus-tacker ul {
       font-size: 80%;
       margin-top: 6rem;
     }
-    #about-me div.column:first-child {
+    #markus-tacker div.column:first-child {
       text-align: center;
     }
     #title-slide h1 {
@@ -105,32 +105,24 @@ header-includes: |
   </style>
 ---
 
-## About me
+## Markus Tacker
 
 :::::::::::::: {.columns}
 
-::: {.column width=33%}
+::: {.column width=40%}
 
 ![Markus Tacker](./markus.jpg){width=50%}
 
-Markus Tacker
+:::
+
+::: {.column width=48%}
+
+Senior R&D Engineer, Nordic Semiconductor, Trondheim
 
 <small>**Software crafter. Code donor. Mentor. Speaker. Conference & Community
 builder. Camper.**</small>
 
-<small>[\@coderbyheart](https://twitter.com/coderbyheart)</small>
-
-:::
-
-::: {.column}
-
-- 1980: Born in Germany (Xennial)
-- 1998: first business building websites
-- 2003: Mediengestalter für Digital- und Printmedien, Fachrichtung
-  Medienoperating nonprint
-- 2012: B.Sc. Computer Science (Univ. Wiesbaden)
-- 2017+: in Trondheim, Senior R&D Engineer at
-  [Nordic Semiconductor](https://www.nordicsemi.com/)
+[\@coderbyheart](https://twitter.com/coderbyheart)
 
 :::
 
@@ -208,7 +200,7 @@ You can see that the label of ‘full stack developer'
 
 ## Your skills are domain specific
 
-![Skill graph](./skills2.png)
+![Skill graph](./skills2.png){width=75%}
 
 :::notes
 
@@ -273,16 +265,6 @@ own.
 
 :::
 
-## Writing software is a team effort
-
-![Work](./work.webp)
-
-:::notes
-
-Source: https://sweartrek.tumblr.com/post/166083037925/work
-
-:::
-
 ## You will always lack important skills
 
 to realize the best work you have ever done.
@@ -291,28 +273,13 @@ to realize the best work you have ever done.
 
 to work with you
 
-## The more experienced you are
+## Writing software is a team effort
 
-the more others depend on you enabling them to achieve their best.
-
-## I'd love to have more software problems
-
-but I really only have people problems.
+![Work](./work.webp)
 
 :::notes
 
-If I would categorize the problems I encountered in my career into people
-problems and software problems, it's only the people problems that are the real
-challenge.
-
-I'd love to have more software problems, because dealing with software problems
-is sometimes hard, but there is always a solution: fix it, hack it, or scrap it
-and take another approach.
-
-But people problems are the ones that give me sleepless nights and stress me
-out. These problems are different: we can't make the person on the other side do
-what we want – we can only try to get on the same level with them to resolve
-issues, but we can't, ultimately, change them.
+Source: https://sweartrek.tumblr.com/post/166083037925/work
 
 :::
 
@@ -336,6 +303,27 @@ this is not because our employers don't offer this, as they rarely offer
 structured tech training, either.
 
 I want us to change this. That's why I am writing this article.
+
+:::
+
+## I'd love to have more software problems
+
+but I really only have people problems.
+
+:::notes
+
+If I would categorize the problems I encountered in my career into people
+problems and software problems, it's only the people problems that are the real
+challenge.
+
+I'd love to have more software problems, because dealing with software problems
+is sometimes hard, but there is always a solution: fix it, hack it, or scrap it
+and take another approach.
+
+But people problems are the ones that give me sleepless nights and stress me
+out. These problems are different: we can't make the person on the other side do
+what we want – we can only try to get on the same level with them to resolve
+issues, but we can't, ultimately, change them.
 
 :::
 
@@ -549,8 +537,8 @@ and
 
 Please share your feedback!
 
-<small>[m@coderbyheart.com](mailto:m@coderbyheart.com)  
-[\@coderbyheart](https://twitter.com/coderbyheart)</small>
+[m@coderbyheart.com](mailto:m@coderbyheart.com)  
+[\@coderbyheart](https://twitter.com/coderbyheart)
 
-<small>Blog post with all the links:  
-[`bit.ly/codecomm`](https://bit.ly/codecomm)</small>
+Blog post with all the links:  
+[`bit.ly/codecomm`](https://bit.ly/codecomm)
